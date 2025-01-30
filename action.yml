@@ -1,0 +1,15 @@
+name: 'retrieve-github-access-token'
+description: 'Get a Github access token to access a private repo managed by Stainless.'
+author: Stainless
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+
+inputs:
+  repo:
+    description: 'The owner/name of the repo to get an access token for. Example: lithic-com/lithic-python'
+    required: true
+  stainless-api-key:
+    description: 'The API key provided to you by Stainless'
+    required: true

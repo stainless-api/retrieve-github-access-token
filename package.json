@@ -1,0 +1,25 @@
+{
+  "name": "retrieve-github-access-token",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/stainless-api/retrieve-github-access-token.git",
+  "author": "David Ackerman <dackerman@stainless.com>",
+  "license": "Apache 2.0",
+  "private": true,
+  "scripts": {
+    "build": "ncc build index.js",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.8"
+  }
+}
