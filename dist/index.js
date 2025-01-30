@@ -27559,7 +27559,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 
-const BASE_URL = 'http://localhost:3000/api'; // 'https://api.stainlessapi.com/api';
+const BASE_URL = 'https://api.stainlessapi.com/api';
 
 async function main() {
   try {
@@ -27637,8 +27637,7 @@ function safeJson(input) {
   }
 }
 
-retrieveGithubAccessToken('dackerman/terraform-provider-demostore', 'stl_sk_001tdXCJ3YgjQO4RvnKw2x7H0t2y01WJ').then(console.log).catch(console.error);
-// main();
+main();
 
 })();
 
