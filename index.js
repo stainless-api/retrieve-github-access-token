@@ -28,7 +28,7 @@ async function retrieveGithubAccessToken(fullRepo, apiKey) {
 
   console.log(`Getting Github access token for`, { owner, repo });
 
-  const url = `${BASE_URL}/github-access-token`;
+  const url = `${BASE_URL}/repo-access-token`;
   const res = await fetch(url, {
     method: 'POST',
     body: JSON.stringify({
