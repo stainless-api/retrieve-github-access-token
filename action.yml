@@ -3,7 +3,7 @@ description: 'Get a Github access token to access a private repo managed by Stai
 author: Stainless
 
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
 
 inputs:

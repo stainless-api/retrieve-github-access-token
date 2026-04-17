@@ -9,6 +9,7 @@ async function main() {
 
     const result = await retrieveGithubAccessToken(fullRepo, apiKey);
 
+    core.setSecret(result.token);
     core.setOutput('github_access_token', result.token);
   } catch (err) {
     core.setFailed(`retrieve-github-access-token failed: ${err.message}`);
@@ -49,10 +50,8 @@ async function retrieveGithubAccessToken(fullRepo, apiKey) {
 
   const data = safeJson(text);
   if (data instanceof Error) {
-    throw new Error(`Could not process API response. text=${text} data=${data} status=${res.status}`);
+    throw new Error(`Could not process API response. status=${res.status} parseError=${data.message}`);
   }
-
-  console.log('API Response', data);
 
   if (data?.error) {
     throw new Error(`API Error ${res.status} - ${data.error}`);
@@ -65,6 +64,8 @@ async function retrieveGithubAccessToken(fullRepo, apiKey) {
   if (data?.token) {
     return { token: data.token };
   }
+
+  throw new Error(`API response did not include a token. status=${res.status}`);
 }
 
 /**
