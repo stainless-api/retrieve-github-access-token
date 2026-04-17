@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/stainless-api/retrieve-github-access-token/compare/v1.0.0...v1.0.1) (2026-04-17)
+
+
+### Bug Fixes
+
+* harden the action ([934939f](https://github.com/stainless-api/retrieve-github-access-token/commit/934939f2f078bad2ba50f8b67aef0fc8480b1e02))
+
 ## 1.0.0 (2026-02-12)
 
 
